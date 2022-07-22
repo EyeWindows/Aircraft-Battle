@@ -23,6 +23,9 @@ public class BulletObj extends GameObj{
             this.y = 300;
             GameUtils.removeObjList.add(this);
         }
+        if(this.getRec().intersects(this.frame.ploneObj.getRec())){
+            GameWin.state = 3;
+        }
     }
 
     @Override
